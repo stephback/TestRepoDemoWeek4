@@ -36,25 +36,69 @@ public class Week4CodingAssignment {
 		
 		int sum = 0;
 		System.out.println("Before the for loop sum = " + sum);
-		// Create a loop to calculate the sum of all the ages in the ages array
+		// Use a loop to iterate through the array 
+		// and calculate the average age. Print the result to the console.
+		
 		for(int i = 0; i < ages.length; i++) {
 			
 			sum += ages[i];
 //			System.out.println(i);
-			System.out.println(sum);
+			//System.out.println(sum);
 			
 		}
-		System.out.println(Arrays.toString(ages));
+		//System.out.println(sum/ages.length);
 		
-		// Create a loop to calculate the sum of all the ages2 in the ages2 array
+		//System.out.println(Arrays.toString(ages));
 		
-		//System.out.println("Outside of for loop!");
+		/*
+		 * 2. Create an array of String called names 
+		 * that contains the following values: 
+		 * “Sam”, “Tommy”, “Tim”, “Sally”, “Buck”, “Bob”.
+		 * 
+		 * a. Use a loop to iterate through the array 
+		 * and calculate the average number of letters per name. 
+		 * Print the result to the console.
+		 * 
+		 * b. Use a loop to iterate through the array 
+		 * again and concatenate all the names together, 
+		 * separated by spaces, and print the result to the console.
+		 */
 			
-
+		String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"}; 
 		
-
+		int sum2 = 0;
+		
+		for(int i = 0; i < names.length; i++) {
+			
+//			System.out.println(names[i]);
+//			System.out.println(names[i].length());
+			
+			sum2 += names[i].length();
+			// System.out.println(names[i].length());
+			
+		}
+		
+		System.out.println("Value of sum for names " + sum2);
+		System.out.println("Average letters per name in names array =  " + (sum2/names.length));
+		
+		String concatNames = "";
+		for(int i = 0; i < names.length; i++) {
+			concatNames += names[i] + " ";
+			System.out.println(concatNames);
+		}
+		
+		// Test concatStrings method:
+		System.out.println(concatNames("Santa", "Claus"));
+		
+	} // end of main method
+	
+	// Create a method that takes 2 Strings and concatenates them together
+	
+	public static String concatNames(String firstName, String lastName) {
+		
+		return firstName + " " + lastName;
+		
 	}
+	
 
-	// comments show up in grey
-
-}
+} // end of class
